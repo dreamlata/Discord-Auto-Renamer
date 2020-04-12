@@ -120,6 +120,7 @@ async def on_voice_state_update(before, after):
                 await bot.edit_channel(before.voice_channel, name=re.sub(r'\(.*?\)', '', before.voice_channel.name))
                 print("Removing eventual game tag from channel " + before.voice_channel.name)
             else:
+                
                 to_name = getMostPlayedGameInChannel(before.voice_channel)
                 if to_name:
                     if not re.search(r'\(.*?\)', before.voice_channel.name):
@@ -161,7 +162,7 @@ def getMostPlayedGameInChannel(channel):
 
 
 def startup():
-    bot.run("your token here")
+    bot.run("Njk1NTAwNTI2OTg0NDk1MTU1.XpLP0Q.QGx13ConbnZxE0rI1cQgdNeK8jM")
 
 
 startup()
